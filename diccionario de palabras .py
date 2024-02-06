@@ -1,18 +1,23 @@
-
-meme_dict = {
-            "CRINGE": "algo raro o embarazoso",
-            "LOL": "una respuesta a algo gracioso",
-            "ROFL":"una respuesta a una broma",
-            "SHEESH":"ligera desaprobación",
-            "CREEPY":"aterrador, siniestro",
-            "AGGRO":"ponerse agresivo/enojado",
-            "MC":"minecraft",
-            "CAUSA":"es como decir amigo",
+# Recomendación: Poner el código en inglés para que más personas de todo el mundo puedan contribuir
+class Dictionary(): # This is a Python class (Python Programming Oriented Objects)
+    def __init__(self):
+        self.meme_dict = {
+                "CRINGE": "algo raro o embarazoso",
+                "LOL": "una respuesta a algo gracioso",
+                "ROFL":"una respuesta a una broma",
+                "SHEESH":"ligera desaprobación",
+                "CREEPY":"aterrador, siniestro",
+                "AGGRO":"ponerse agresivo/enojado",
+                "MC":"minecraft",
+                "CAUSA":"es como decir amigo",
             }
-word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ")
-if word in meme_dict.keys():
-    # ¿Qué debemos hacer si se encuentra la palabra?
-    print(meme_dict[word])
-else:
-    # ¿Qué hacer si no se encuentra la palabra?
-    print("esa palabra no esta en este diccionario")
+        self.search_in_Dictionary()
+            # Function to search words that is on the dictionary
+    def search_in_Dictionary(self):
+        word = str(input("Write a word that you don't understand (with capital letters): "))
+        if word in self.meme_dict:
+            print(self.meme_dict[word])
+        else:
+            print("Error! The word is not in dictionary, please, write other word")
+
+dictionary = Dictionary()
